@@ -5,10 +5,27 @@
  */
 package Vista;
 
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import javax.swing.JFrame;
+
 /**
  *
  * @author sala_17
  */
-public class VentanaPrincipal {
+public class VentanaPrincipal extends JFrame implements ActionListener {
     
+    public PanelBotones panelBtnes;
+
+    public VentanaPrincipal() {
+        this.inicializarComponentes();
+    }
+    public void inicializarComponentes() {
+        this.panelBtnes = new PanelBotones();
+    }
+
+    @Override
+    public void actionPerformed(ActionEvent ae) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
 }
