@@ -5,6 +5,7 @@
  */
 package Vista;
 
+import java.awt.BorderLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.JFrame;
@@ -15,13 +16,21 @@ import javax.swing.JFrame;
  */
 public class VentanaPrincipal extends JFrame implements ActionListener {
     
-    public PanelBotones panelBtnes;
+    private PanelBotones panelBtnes;
 
     public VentanaPrincipal() {
         this.inicializarComponentes();
     }
     public void inicializarComponentes() {
+        
         this.panelBtnes = new PanelBotones();
+        this.add(this.panelBtnes,BorderLayout.EAST);
+        
+        this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        this.setTitle("Tonalidad");
+        this.setSize(400,400);
+        this.setVisible(true);
+        
     }
 
     @Override
