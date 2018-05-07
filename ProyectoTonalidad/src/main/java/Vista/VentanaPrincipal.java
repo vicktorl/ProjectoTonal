@@ -16,7 +16,8 @@ import javax.swing.JFrame;
  */
 public class VentanaPrincipal extends JFrame implements ActionListener {
     
-    private PanelBotones panelBtnes;
+    public PanelBotones panelBtnes;
+    public PanelFormulario panelForm;
 
     public VentanaPrincipal() {
         this.inicializarComponentes();
@@ -24,13 +25,16 @@ public class VentanaPrincipal extends JFrame implements ActionListener {
     public void inicializarComponentes() {
         
         this.panelBtnes = new PanelBotones();
-        this.add(this.panelBtnes,BorderLayout.EAST);
+        this.panelForm = new PanelFormulario();
+        
+        this.add(this.panelBtnes,BorderLayout.CENTER);
+        this.add(this.panelForm,BorderLayout.NORTH);
         
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         this.setTitle("Tonalidad");
         this.setSize(400,400);
-        this.setVisible(true);
-        
+        this.setVisible(true);        
+    
     }
 
     @Override

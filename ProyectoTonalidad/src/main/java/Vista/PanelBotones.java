@@ -15,7 +15,7 @@ import javax.swing.JPanel;
  *
  * @author sala_17
  */
-public class PanelBotones extends JPanel implements ActionListener {
+public class PanelBotones extends JPanel  {
 
     private JButton btnMostrarEsala;
     private JButton btnMostrarTonalidad;
@@ -26,26 +26,16 @@ public class PanelBotones extends JPanel implements ActionListener {
     }
 
     public void inicializarComponentes(){
-        
-        //FlowLayout distribution = new FlowLayout();
-        //this.SetLayout(distribution);
+
         
         this.btnLimpiar = new JButton ("Limpiar");
-        this.btnLimpiar.addActionListener(this);
         this.add(this.btnLimpiar);
         
         this.btnMostrarEsala = new JButton("Mostrar Escala");
-        this.btnMostrarEsala.addActionListener(this);
         this.add(this.btnMostrarEsala);
         
         this.btnMostrarTonalidad = new JButton(" Mostrar Tonalidad");
-        this.btnMostrarTonalidad.addActionListener(this);
         this.add(this.btnMostrarTonalidad);
         
-    }
-
-    @Override
-    public void actionPerformed(ActionEvent e) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 }
