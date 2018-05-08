@@ -18,6 +18,7 @@ public class VentanaPrincipal extends JFrame implements ActionListener {
     
     public PanelBotones panelBtnes;
     public PanelFormulario panelForm;
+    public PanelTabla panelTabla;
 
     public VentanaPrincipal() {
         this.inicializarComponentes();
@@ -25,20 +26,33 @@ public class VentanaPrincipal extends JFrame implements ActionListener {
     public void inicializarComponentes() {
         
         this.panelBtnes = new PanelBotones();
-        this.panelForm = new PanelFormulario();
+        this.add(this.panelBtnes,BorderLayout.PAGE_START);
         
-        this.add(this.panelBtnes,BorderLayout.CENTER);
-        this.add(this.panelForm,BorderLayout.NORTH);
+        this.panelForm = new PanelFormulario();
+        this.add(this.panelForm,BorderLayout.LINE_END);
+        
+        this.panelTabla = new PanelTabla();
+        this.add(this.panelTabla,BorderLayout.CENTER);
+        
+        panelBtnes.btnMostrarEsala.addActionListener(this);
+        panelBtnes.btnLimpiar.addActionListener(this);
+        panelBtnes.btnMostrarTonalidad.addActionListener(this);
         
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         this.setTitle("Tonalidad");
-        this.setSize(400,400);
+        this.setSize(1000,600);
         this.setVisible(true);        
     
     }
 
     @Override
-    public void actionPerformed(ActionEvent ae) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public void actionPerformed(ActionEvent e) {
+        if (e.getSource() == panelBtnes.btnLimpiar) {
+            
+        } else if (e.getSource() == panelBtnes.btnMostrarEsala) {
+            
+            
+        } else if (e.getSource() == panelBtnes.btnMostrarTonalidad) {
+        }
     }
 }
