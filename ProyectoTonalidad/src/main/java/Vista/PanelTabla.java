@@ -7,6 +7,7 @@ package Vista;
 
 import java.awt.Color;
 import java.awt.Font;
+import java.awt.Graphics;
 import javax.swing.JPanel;
 import javax.swing.JTextArea;
 
@@ -30,5 +31,16 @@ public class PanelTabla extends JPanel{
         Font font = new Font("", Font.BOLD, 15);
         Texto.setFont(font);
         
+    }
+
+    public void paint(Graphics g){
+        
+        int linea =100;
+        super.paint(g);
+        for (int i = 0; i <5; i++) {
+             g.drawLine(700, linea, 70, linea);
+             linea+=20;
+        }
+       
     }
 }

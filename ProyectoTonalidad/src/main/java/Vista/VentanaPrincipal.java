@@ -5,6 +5,7 @@
  */
 package Vista;
 
+import Modelo.Escala;
 import java.awt.BorderLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -40,7 +41,9 @@ public class VentanaPrincipal extends JFrame implements ActionListener {
         
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         this.setTitle("Tonalidad");
-        this.setSize(1000,600);
+        pack();
+        this.setLocationRelativeTo(null);
+       //this.setSize(1000,600);
         this.setVisible(true);        
     
     }
@@ -49,10 +52,14 @@ public class VentanaPrincipal extends JFrame implements ActionListener {
     public void actionPerformed(ActionEvent e) {
         if (e.getSource() == panelBtnes.btnLimpiar) {
             
-        } else if (e.getSource() == panelBtnes.btnMostrarEsala) {
+            panelForm.setTfTono("");
             
+        } else if (e.getSource() == panelBtnes.btnMostrarEsala) {
+            Escala esc = new Escala();
+            esc.mostrarEscala();
             
         } else if (e.getSource() == panelBtnes.btnMostrarTonalidad) {
+            
         }
     }
 }
