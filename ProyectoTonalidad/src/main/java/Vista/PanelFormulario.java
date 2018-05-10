@@ -5,7 +5,10 @@
  */
 package Vista;
 
+import java.awt.Color;
+import java.awt.Font;
 import java.awt.GridLayout;
+import javax.swing.ImageIcon;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
@@ -19,7 +22,8 @@ public class PanelFormulario extends JPanel {
     private JLabel lblIngresarAcordes;
     private JTextField tfIngresarAcordes;
     private JLabel lblTono;
-    private JTextField tfTono;
+    private ImageIcon Fig1;
+    private JLabel etiqueta1;
 
     public PanelFormulario() {
         this.inicializarComponentes();
@@ -27,6 +31,8 @@ public class PanelFormulario extends JPanel {
 
     public void inicializarComponentes() {
 
+        
+        this.setBackground(Color.CYAN);
         GridLayout grid = new GridLayout(12, 1);
         this.setLayout(grid);
 
@@ -38,10 +44,7 @@ public class PanelFormulario extends JPanel {
 
         this.lblTono = new JLabel("Tonalidad : ");
         this.add(this.lblTono);
-
-        this.tfTono = new JTextField();
-        this.add(this.tfTono);
-
+        
     }
 
     public JTextField getTfIngresarAcordes() {
@@ -54,10 +57,5 @@ public class PanelFormulario extends JPanel {
 
     public JLabel getLblTono() {
         return lblTono;
-    }
-
-    public void setTfTono(String tfTono) {
-        this.tfTono.setText(tfTono);
-
     }
 }

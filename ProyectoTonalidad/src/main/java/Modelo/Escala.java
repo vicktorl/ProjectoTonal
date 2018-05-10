@@ -18,15 +18,21 @@ public class Escala {
     public PanelTabla tabla;
 
     public Escala() {
+        inicializarcomponentes();
     }
     
-      public void mostrarEscala() {
+      public void inicializarcomponentes() {
 
         Graphics g = this.tabla.getGraphics();
-        g.setColor(Color.WHITE);
-        g.drawLine(30, 200, 30, 275);
         g.setColor(Color.BLACK);
-        g.drawLine(10, 200, 50, 200);
-        g.drawLine(10, 275, 50, 275);
+        g.drawOval(20,20,20,20);
+        g.clearRect(780, 110, 110, 110);
       }
+      
+       public void agregarNota(Graphics g){
+       
+        g.drawOval(30, 50, 690, 450);
+        
+    }
+      
 }

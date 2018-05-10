@@ -17,7 +17,7 @@ import javax.swing.border.TitledBorder;
  *
  * @author sala_17
  */
-public class PanelBotones extends JPanel  {
+public class PanelBotones extends JPanel {
 
     public JButton btnMostrarEsala;
     public JButton btnMostrarTonalidad;
@@ -27,15 +27,17 @@ public class PanelBotones extends JPanel  {
         this.inicializarComponentes();
     }
 
-    public void inicializarComponentes(){
+    public void inicializarComponentes() {
 
-        
-        this.btnLimpiar = new JButton ("Limpiar");
+        Border bordejpanel = new TitledBorder(new LineBorder(Color.BLACK), "");
+        this.setBorder(bordejpanel);
+
+        this.btnLimpiar = new JButton("Limpiar");
         this.add(this.btnLimpiar);
-        
+
         this.btnMostrarEsala = new JButton("Mostrar Escala");
         this.add(this.btnMostrarEsala);
-        
+
         this.btnMostrarTonalidad = new JButton(" Mostrar Tonalidad");
         this.add(this.btnMostrarTonalidad);
     }

@@ -52,11 +52,8 @@ public class VentanaPrincipal extends JFrame implements ActionListener {
     public void actionPerformed(ActionEvent e) {
         if (e.getSource() == panelBtnes.btnLimpiar) {
             
-            panelForm.setTfTono("");
-            
         } else if (e.getSource() == panelBtnes.btnMostrarEsala) {
-            Escala esc = new Escala();
-            esc.mostrarEscala();
+            //Escala esc = new Escala();
             
         } else if (e.getSource() == panelBtnes.btnMostrarTonalidad) {
             
